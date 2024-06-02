@@ -775,8 +775,8 @@ export default function Home() {
             centeredSlides={true}
             loop={true}
             autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
+              delay: 1000,
+              disableOnInteraction: true,
             }}
             modules={[Autoplay]}
             onSlideChange={() => console.log("slide change")}
