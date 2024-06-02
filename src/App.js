@@ -1,14 +1,14 @@
-import './App.css';
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import NoPage from './pages/NoPage';
-import About from './pages/About';
-import Services from './pages/Services';
-import Projects from './pages/Projects';
-import Footer from './components/footer/Footer';
-
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import Blogs from "./pages/Blogs";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
             <Route path="services" element={<Services />} />
             <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="blogs" element={<Blogs />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
