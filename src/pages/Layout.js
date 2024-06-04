@@ -20,6 +20,10 @@ export default function Layout() {
     };
   }, []);
 
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  const closeNav = () => setIsNavCollapsed(true);
   return (
     <>
       <header className="header sticky-top" style={{ zIndex: "9999" }}>
@@ -37,37 +41,56 @@ export default function Layout() {
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
-                    aria-expanded="false"
                     aria-label="Toggle navigation"
+                    aria-expanded={!isNavCollapsed ? true : false}
+                    onClick={handleNavCollapse}
                   >
                     <span className="navbar-toggler-icon" />
                   </button>
-                  <div className="collapse navbar-collapse" id="navbarNav">
+                  <div
+                    className={`${
+                      isNavCollapsed ? "collapse" : ""
+                    } navbar-collapse`}
+                    id="navbarNav"
+                  >
                     <ul className="navbar-nav ms-md-auto gap-2">
                       <li className="nav-item rounded">
                         <Link
                           className="nav-link"
                           aria-current="page"
                           to="/about"
+                          onClick={closeNav}
                         >
                           <i className="bi bi-house-fill me-2" />
                           About
                         </Link>
                       </li>
                       <li className="nav-item rounded">
-                        <Link className="nav-link" to="/services">
+                        <Link
+                          className="nav-link"
+                          to="/services"
+                          onClick={closeNav}
+                        >
                           <i className="bi bi-people-fill me-2" />
                           Services
                         </Link>
                       </li>
                       <li className="nav-item rounded">
-                        <Link className="nav-link" to="/projects">
+                        <Link
+                          className="nav-link"
+                          to="/projects"
+                          onClick={closeNav}
+                        >
                           <i className="bi bi-people-fill me-2" />
                           Projects
                         </Link>
                       </li>
                       <li className="nav-item rounded">
-                        <Link className="nav-link" to="/contact">
+                        <Link
+                          className="nav-link"
+                          to="/contact"
+                          onClick={closeNav}
+                        >
                           <i className="bi bi-people-fill me-2" />
                           Contact
                         </Link>
