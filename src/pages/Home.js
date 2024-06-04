@@ -770,86 +770,114 @@ export default function Home() {
 
       <section className="clients p-5">
         <div className="row">
-          <Swiper
-            spaceBetween={50}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: true,
-            }}
-            modules={[Autoplay]}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            className="mySwiper"
-            breakpoints={{
-              575: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 5 },
-              1200: { slidesPerView: 7 },
-            }}
-          >
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={client_img}
-                style={{ width: "150px", height: "50px", padding: "0px 10px" }}
-              />
-            </SwiperSlide>
-          </Swiper>
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+                  height="100"
+                  width="250"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

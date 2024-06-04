@@ -41,9 +41,15 @@ body {
   --mid-cursor-size: var(--cursor-size);
   --outer-cursor-size: calc(0.2 * var(--cursor-size));
 
-  --inner-cursor-margin: calc((var(--mid-cursor-size) / 2) - (var(--inner-cursor-size) / 2) - var(--mid-border-size));
+  --inner-cursor-margin: calc(
+    (var(--mid-cursor-size) / 2) - (var(--inner-cursor-size) / 2) -
+      var(--mid-border-size)
+  );
   --mid-cursor-margin: calc(-0.5 * var(--mid-cursor-size));
-  --outer-cursor-margin: calc((var(--mid-cursor-size) / 2) - (var(--outer-cursor-size) / 2) - var(--mid-border-size));
+  --outer-cursor-margin: calc(
+    (var(--mid-cursor-size) / 2) - (var(--outer-cursor-size) / 2) -
+      var(--mid-border-size)
+  );
 
   --transition-duration: 100ms;
 
@@ -197,9 +203,11 @@ body {
 
 .hero-section .cta-btn {
   padding: 18px 30px;
-  background: linear-gradient(90deg,
-      rgba(0, 144, 146, 1) 21%,
-      rgba(0, 192, 195, 1) 62%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 144, 146, 1) 21%,
+    rgba(0, 192, 195, 1) 62%
+  );
   color: #fff;
   border-radius: 50px;
   transition: 1000ms;
@@ -209,9 +217,11 @@ body {
 
 .hero-section .cta-btn:hover {
   color: #fff;
-  background: linear-gradient(90deg,
-      rgba(0, 192, 195, 1) 21%,
-      rgba(0, 144, 146, 1) 62%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 192, 195, 1) 21%,
+    rgba(0, 144, 146, 1) 62%
+  );
   transition: 1000ms;
   padding: 16px 40px;
   transform: translateY(-0px);
@@ -368,7 +378,8 @@ li {
 
 /* breadcrumb start */
 .breadcrumb {
-  background: url("./assets/images/pexels-fauxels-3183150.jpg") rgba(43, 37, 5, 0.5);
+  background: url("./assets/images/pexels-fauxels-3183150.jpg")
+    rgba(43, 37, 5, 0.5);
   padding: 10rem 0rem 15rem 0rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -809,9 +820,35 @@ li {
 /* services section end */
 
 /* clients logos start */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
 
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.clients .slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.clients .slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.clients .slider .slide {
+  height: 100px;
+  width: 250px;
+}
 /* clients logos start */
-
 
 /*project section start  */
 .project-section {
@@ -1605,7 +1642,8 @@ footer .copyright {
 /* footer end */
 
 /* media query start */
-@media screen and (min-width: 1200px) and (max-width: 1920px) {}
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+}
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
   .hero-section .carousel-caption {
